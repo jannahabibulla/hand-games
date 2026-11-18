@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Air Hero</title>
+  <meta name="description" content="A Guitar Hero–style game you play with your fingertips in front of your camera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="../shared/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tone@15.1.22/build/Tone.js"></script>
+  <style>
+    #video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="top"><a href="../">← Hand games</a></nav>
+    <h1>Air Hero</h1>
+    <p class="lede">Play the melody in the air. Turn on the camera, pick a song, and press <strong>Start</strong>. Notes fall down the lanes: <strong>have your index finger over a circle when its note lands</strong> and you play that note. Hold a finger on one circle for repeated notes, or move between circles as the tune moves. Both hands work. No camera? Use <strong>A S D F G</strong> or click the lanes.</p>
+    <div class="bar">
+      <label for="song">Song <select id="song"></select></label>
+      <button id="start" class="primary" type="button">Start (Enter)</button>
+      <span class="spacer"></span>
+      <button id="fullscreen" type="button">Full screen (F)</button>
+      <button id="camera" class="camera-toggle" type="button" aria-pressed="false">Turn on camera</button>
+    </div>
+    <div id="stage" class="stage">
+      <video id="video" autoplay playsinline muted hidden></video>
+      <canvas id="canvas"></canvas>
+      <p id="status" class="status" role="status"></p>
+    </div>
+    <p class="foot">Works best in Chrome. Your camera picture stays in your browser; nothing is uploaded.</p>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>

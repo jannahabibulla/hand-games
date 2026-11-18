@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hand Games</title>
+  <meta name="description" content="Two games you play with your hands in front of a webcam: Air Hero and Cross the Road.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="shared/style.css">
+  <style>
+    .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .game { display: grid; gap: 10px; padding: 20px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; color: var(--text); text-decoration: none; min-width: 0; }
+    .game:hover, .game:focus-visible { border-color: var(--accent); outline: none; }
+    .game h2 { margin: 0; font: 800 1.6rem/1.1 var(--display); }
+    .game p { margin: 0; color: var(--muted); }
+    .how { font-size: 14px; color: var(--text); }
+    .play { justify-self: start; margin-top: 4px; padding: 8px 16px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-weight: 700; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Hand Games</h1>
+    <p class="lede">Two games you play by moving your hands in front of your webcam. Open one in Chrome, press <strong>Turn on camera</strong>, and allow camera access. Hand tracking runs in your browser, so your camera picture never leaves your computer.</p>
+    <div class="games">
+      <a class="game" href="air-hero/">
+        <h2>Air Hero</h2>
+        <p>Notes fall down glowing lanes. Hold a fingertip over each circle as its note lands to play the melody.</p>
+        <p class="how">3 songs · score, combos and stars</p>
+        <span class="play">Play Air Hero</span>
+      </a>
+      <a class="game" href="cross-the-road/">
+        <h2>Cross the Road</h2>
+        <p>Help the chicken across roads and rivers. Swipe your hand to aim, pinch to hop.</p>
+        <p class="how">Endless · how far can you get?</p>
+        <span class="play">Play Cross the Road</span>
+      </a>
+    </div>
+    <p class="foot">Made in TDM 155AI with MediaPipe hand tracking and Tone.js.</p>
+  </main>
+</body>
+</html>
